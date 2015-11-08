@@ -1159,7 +1159,7 @@ neuron is either low activation ($\approx 0$) or high activation
 <em>saturated</em> and, as a result, the weight has stopped learning (or
 is learning slowly).  Similar remarks hold also for the biases of
 output neuron.-->
-前章の<a href="chap1.html#sigmoid_graph">シグモイド関数のグラフ</a>を思い出すと、$z^L_j$が$0$か$1$に近づくと関数$\sigma$はとても平坦になっていました。
+前章の<a href="chap1.html#sigmoid_graph">シグモイド関数のグラフ</a>を思い出すと、$\sigma(z^L_j)$が$0$か$1$に近づくとき関数$\sigma$はとても平坦になっていました。
 これは$\sigma'(z^L_j) \approx 0$の状態です。
 従って、出力ニューロンの活性が低かったり($\approx 0$)、高かったり($\approx 1$)すると、最終層の学習は遅い事がわかります。
 このような状況を、出力ニューロンは<em>飽和</em>し、重みの学習が終了している（もしくは重みの学習が遅い）と表現するのが一般的です。
