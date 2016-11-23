@@ -63,7 +63,9 @@ $('#toc_using_neural_nets_to_recognize_handwritten_digits_reveal').click(functio
      $("#toc_img_using_neural_nets_to_recognize_handwritten_digits").attr('src', 'images/arrow.png');
    };
    $('#toc_using_neural_nets_to_recognize_handwritten_digits').toggle('fast', function() {});
-});</script><p class='toc_mainchapter'><a id="toc_how_the_backpropagation_algorithm_works_reveal" class="toc_reveal" onMouseOver="this.style.borderBottom='1px solid #2A6EA6';" onMouseOut="this.style.borderBottom='0px';"><img id="toc_img_how_the_backpropagation_algorithm_works" src="images/arrow.png" width="15px"></a><a href="chap2.html">逆伝播の仕組み</a><div id="toc_how_the_backpropagation_algorithm_works" style="display: none;"><p class="toc_section"><ul><a href="chap2.html#warm_up_a_fast_matrix-based_approach_to_computing_the_output_from_a_neural_network"><li>Warm up: a fast matrix-based approach to computing the output  from a neural network</li></a><a href="chap2.html#the_two_assumptions_we_need_about_the_cost_function"><li>The two assumptions we need about the cost function</li></a><a href="chap2.html#the_hadamard_product_$s_\odot_t$"><li>The Hadamard product, $s \odot t$</li></a><a href="chap2.html#the_four_fundamental_equations_behind_backpropagation"><li>The four fundamental equations behind backpropagation</li></a><a href="chap2.html#proof_of_the_four_fundamental_equations_(optional)"><li>Proof of the four fundamental equations (optional)</li></a><a href="chap2.html#the_backpropagation_algorithm"><li>The backpropagation algorithm</li></a><a href="chap2.html#the_code_for_backpropagation"><li>The code for backpropagation</li></a><a href="chap2.html#in_what_sense_is_backpropagation_a_fast_algorithm"><li>In what sense is backpropagation a fast algorithm?</li></a><a href="chap2.html#backpropagation_the_big_picture"><li>Backpropagation: the big picture</li></a></ul></p></div>
+});</script><p class='toc_mainchapter'><a id="toc_how_the_backpropagation_algorithm_works_reveal" class="toc_reveal" onMouseOver="this.style.borderBottom='1px solid #2A6EA6';" onMouseOut="this.style.borderBottom='0px';"><img id="toc_img_how_the_backpropagation_algorithm_works" src="images/arrow.png" width="15px"></a><a href="chap2.html">逆伝播の仕組み</a><div id="toc_how_the_backpropagation_algorithm_works" style="display: none;"><p class="toc_section"><ul><a href="chap2.html#warm_up_a_fast_matrix-based_approach_to_computing_the_output
+_from_a_neural_network"><li>Warm up: a fast matrix-based approach to computing the output
+  from a neural network</li></a><a href="chap2.html#the_two_assumptions_we_need_about_the_cost_function"><li>The two assumptions we need about the cost function</li></a><a href="chap2.html#the_hadamard_product_$s_\odot_t$"><li>The Hadamard product, $s \odot t$</li></a><a href="chap2.html#the_four_fundamental_equations_behind_backpropagation"><li>The four fundamental equations behind backpropagation</li></a><a href="chap2.html#proof_of_the_four_fundamental_equations_(optional)"><li>Proof of the four fundamental equations (optional)</li></a><a href="chap2.html#the_backpropagation_algorithm"><li>The backpropagation algorithm</li></a><a href="chap2.html#the_code_for_backpropagation"><li>The code for backpropagation</li></a><a href="chap2.html#in_what_sense_is_backpropagation_a_fast_algorithm"><li>In what sense is backpropagation a fast algorithm?</li></a><a href="chap2.html#backpropagation_the_big_picture"><li>Backpropagation: the big picture</li></a></ul></p></div>
 <script>
 $('#toc_how_the_backpropagation_algorithm_works_reveal').click(function() {
    var src = $('#toc_img_how_the_backpropagation_algorithm_works').attr('src');
@@ -1657,7 +1659,7 @@ specific function we want to minimize for neural networks.
 </p><p>
 
   それでは、私たちは関数 $C(v)$ を最小化しようとしているとしましょう。$C(v)$は複数の引数 $v=v_1,v_2, \ldots$
-  を取って実数の値を返す関数なら何でもかまいません。ここで私は、どんな関数でも良いということを強調するために $w$ と $b$ の記号を $v$ に置き換えました。-もう私たちはニューラルネットワークに特化した文脈で考えているのではありません。ここで $C(v)$ を最小化するのに $C$ が二つの変数からなる関数だと考えることが効果的です。二つの変数を $v_1$ と $v_2$ と呼ぶことにしましょう。
+  を取って実数の値を返す関数なら何でもかまいません。ここで私は、どんな関数でも良いということを強調するために $w$ と $b$ の記号を $v$ に置き換えました。もう私たちはニューラルネットワークに特化した文脈で考えているのではありません。ここで $C(v)$ を最小化するのに $C$ が二つの変数からなる関数だと考えることが効果的です。二つの変数を $v_1$ と $v_2$ と呼ぶことにしましょう。
 
 <!--
 Okay, let's suppose we're trying to minimize some function, $C(v)$.
@@ -1946,7 +1948,7 @@ works.
 -->
 
 </p><p>
-私は勾配降下法の $C$ がちょうど二つの変数の関数である場合を説明しました。しかし、実際には、 $C$ が複数の関数であっても何も問題はありません。ここで $C$ が $m$ 変数 $v_1, \ldots ,v_m$ の関数であると仮定します。この時、微小な変化 $\Delta v = (\Delta v_1,
+私は勾配降下法の $C$ がちょうど二つの変数の関数である場合を説明しました。しかし、実際には、 $C$ がもっと多くの変数の関数であっても何も問題はありません。ここで $C$ が $m$ 変数 $v_1, \ldots ,v_m$ の関数であると仮定します。この時、微小な変化 $\Delta v = (\Delta v_1,
 \ldots, \Delta v_m)^T$ によって持たされる $C$ の変化 $\Delta C$ は
 
 <!--
@@ -2209,7 +2211,7 @@ chosen mini-batch of training inputs, and training with those,
   \sum_j \frac{\partial C_{X_j}}{\partial b_l},
 \tag{21}\end{eqnarray}
 
-総和は現在のミニバッチにおける全ての訓練サンプル $X_j$ です。次に、私たちは別の無作為に選んだミニバッチで訓練を行います。同じように、訓練入力がなくなるまで続ければ、<em>画期的な</em>訓練の完成です。この時点で私たちは新しい画期的な方法を使って訓練をやり直します。
+総和は現在のミニバッチにおける全ての訓練サンプル $X_j$ です。次に、私たちは別の無作為に選んだミニバッチで訓練を行います。同じように、訓練入力がなくなるまで続ければ、1回の訓練の<em>エポック</em>(訳注:訓練データ全体を1巡する事)が完了します。この時点で私たちは新しい訓練エポックをやり直します。
 
 <!--
 where the sums are over all the training examples $X_j$ in the current
@@ -2221,7 +2223,7 @@ we start over with a new training epoch.
 -->
 
 </p><p>
-ちなみに、コスト関数とミニバッチにおける重みとバイアスの更新尺度の多様な慣習は注目に値します。等式<span id="margin_620946352852_reveal" class="equation_link">(6)</span><span id="margin_620946352852" class="marginequation" style="display: none;"><a href="chap1.html#eqtn6" style="padding-bottom: 5px;" onMouseOver="this.style.borderBottom='1px solid #2A6EA6';" onMouseOut="this.style.borderBottom='0px';">\begin{eqnarray}  C(w,b) \equiv
+ちなみに、コスト関数とミニバッチで重みとバイアスを更新する縮尺の取り方によって、更新規則が異なってくることは注目に値します。等式<span id="margin_620946352852_reveal" class="equation_link">(6)</span><span id="margin_620946352852" class="marginequation" style="display: none;"><a href="chap1.html#eqtn6" style="padding-bottom: 5px;" onMouseOver="this.style.borderBottom='1px solid #2A6EA6';" onMouseOut="this.style.borderBottom='0px';">\begin{eqnarray}  C(w,b) \equiv
   \frac{1}{2n} \sum_x \| y(x) - a\|^2 \nonumber\end{eqnarray}</a></span><script>$('#margin_620946352852_reveal').click(function() {$('#margin_620946352852').toggle('slow', function() {});});</script>で私たちは全てのコスト関数を $\frac{1}{n}$ の縮尺にしました。しばしば人々は $\frac{1}{n}$ を省略し、個々の訓練例のコストの平均を取る代わりに総和を取ります。これはとりわけ訓練例の総数が事前に分かっていない場合に有効です。これは、例えば、リアルタイムに訓練データが生成されている場合に生じ得ます。そして、同じように、ミニバッチの更新規則 <span id="margin_118229027727_reveal" class="equation_link">(20)</span><span id="margin_118229027727" class="marginequation" style="display: none;"><a href="chap1.html#eqtn20" style="padding-bottom: 5px;" onMouseOver="this.style.borderBottom='1px solid #2A6EA6';" onMouseOut="this.style.borderBottom='0px';">\begin{eqnarray}
   w_k & \rightarrow & w_k' = w_k-\frac{\eta}{m}
   \sum_j \frac{\partial C_{X_j}}{\partial w_k}  \nonumber\end{eqnarray}</a></span><script>$('#margin_118229027727_reveal').click(function() {$('#margin_118229027727').toggle('slow', function() {});});</script>
@@ -2273,7 +2275,7 @@ learning techniques we'll develop in this book.
 </p><p></p><p></p><p></p><p></p><p></p><p><h4><a name="exercise_263792"></a><a href="#exercise_263792">演習</a></h4><ul>
 <li> 極端な勾配降下法は大きさ1のミニバッチを使います。つまり、与えられた一つの訓練入力 $x$ について、重みとバイアスを規則に従い更新して $w_k \rightarrow w_k' =
   w_k - \eta \partial C_x / \partial w_k$ と $b_l \rightarrow b_l' =
-  b_l - \eta \partial C_x / \partial b_l$。その次に、別の訓練入力を選び、そして再びバイアスを更新します。この手続きは<em>オンライン</em>学習または<em>逐次</em>学習として知られるものです。オンライン学習は、ニューラルネットワークの一回の学習を一つの訓練入力で行います(ちょうど人間がそうするように)。オンライン学習の有名な長所と短所を一つ、確率的勾配降下法のミニバッチの大きさが $20$ の場合で比較してください。
+  b_l - \eta \partial C_x / \partial b_l$。その次に、別の訓練入力を選び、そして再びバイアスを更新します。この手続きは<em>オンライン</em>学習または<em>逐次</em>学習として知られるものです。オンライン学習は、ニューラルネットワークの一回の学習を一つの訓練入力で行います(ちょうど人間がそうするように)。オンライン学習の長所と短所を一つずつ、確率的勾配降下法のミニバッチの大きさが $20$ の場合と比較して挙げてください。
 </ul></p><p>
 
 <!--
@@ -2293,7 +2295,7 @@ learning techniques we'll develop in this book.
 </ul></p><p>
 -->
 
-本節の結びに勾配降下法に慣れていない人をしばしば悩ませる点を議論させてください。ニューラルネットワークにおけるコスト $C$ は、当然ながら、複数の変数の関数であり - 全ての重みとバイアス - それゆえに非常に高次元な空間の表面することがあります。一部の人はこのとき、"私はこれらの超次元の可視化ができるようになる必要がある"と考え、困ってしまいます。そして彼らは心配しはじめます："私は四次元で考えることができないし、五次元(あるいは五百万次元)なんてもっと無理だ"。彼らには"真の"数学者が持っている何か特別な能力が欠けているのでしょうか？勿論、答えはノーです。本職の数学者でも四次元の可視化はできませんし、それ以上についてはなおさらです。彼らは別の表現方法を開発するというトリックを使っているのです。それはちょうどこれまで私たちがやってきた： $C$ を減少させる方法を明らかにする $\Delta C$ の代数表現です(視覚化ではなく)。高次元について考えるのが得意な人は頭の中にこの種の多種多様なテクニックをライブラリとして持っています；私たちの代数的トリックもその一つです。これらのテクニックには私たちの慣れている三次元を視覚化する時の簡素性は持ってませんが、ひとたびそういったテクニックのライブラリを確立すれば、あなたは高次元について考えることがとても得意になるでしょう。私はこれ以上この詳細に入っていきませんが、もしあなたに興味があるなら、本職の数学者が高次元の思考に用いるテクニックの<a href="http://mathoverflow.net/questions/25983/intuitive-crutches-for-higher-dimensional-thinking">この議論</a> を読んで楽しめるでしょう。いくつかのテクニックに関する議論は非常に難解ですが、たくさんの素晴らしいコンテンツが直観的でとっつきやすく、そして、全ての人が習得できるものです。
+本節の結びに勾配降下法に慣れていない人をしばしば悩ませる点を議論させてください。ニューラルネットワークにおけるコスト $C$ は、当然ながら、複数の変数の関数であり - 全ての重みとバイアス - それゆえに非常に高次元な空間上の曲面であるともいえます。一部の人はこのとき、"私はこれらの超次元の可視化ができるようになる必要がある"と考え、困ってしまいます。そして彼らは心配しはじめます："私は四次元で考えることができないし、五次元(あるいは五百万次元)なんてもっと無理だ"。彼らには"真の"数学者が持っている何か特別な能力が欠けているのでしょうか？勿論、答えはノーです。本職の数学者でも四次元の可視化はできませんし、それ以上についてはなおさらです。彼らは別の表現方法を開発するというトリックを使っているのです。それはちょうどこれまで私たちがやってきた： $C$ を減少させる方法を明らかにする $\Delta C$ の代数表現です(視覚化ではなく)。高次元について考えるのが得意な人は頭の中にこの種の多種多様なテクニックをライブラリとして持っています；私たちの代数的トリックもその一つです。これらのテクニックには私たちの慣れている三次元を視覚化する時の簡素性は持ってませんが、ひとたびそういったテクニックのライブラリを確立すれば、あなたは高次元について考えることがとても得意になるでしょう。私はこれ以上この詳細に入っていきませんが、もしあなたに興味があるなら、本職の数学者が高次元の思考に用いるテクニックの<a href="http://mathoverflow.net/questions/25983/intuitive-crutches-for-higher-dimensional-thinking">この議論</a> を読んで楽しめるでしょう。いくつかのテクニックに関する議論は非常に難解ですが、たくさんの素晴らしいコンテンツが直観的でとっつきやすく、そして、全ての人が習得できるものです。
 
 <!--
 Let me conclude this section by discussing a point that sometimes bugs
@@ -2342,7 +2344,6 @@ code repository for this book,</p><p><div class="highlight"><pre>git clone https
   <a href="https://github.com/mnielsen/neural-networks-and-deep-learning/archive/master.zip">here</a>.</p><p>
 -->
 
-<h3><a name="implementing_our_network_to_classify_digits"></a><a href="#implementing_our_network_to_classify_digits">数字分類のニューラルネットワーク実装</a></h3></p><p>
 それでは、手書き数字を認識する方法を学ぶプログラムを作成していきましょう。その際、確率的勾配降下法とMNISTの訓練データを使用します。
 最初に私たちはMNISTデータを手に入れる必要があります。もしあなたが<tt>git</tt>のユーザーならば、下記のリポジトリからクローンすることでデータを取得できます。
 </p><p><div class="highlight"><pre>git clone https://github.com/mnielsen/neural-networks-and-deep-learning.git
@@ -2358,7 +2359,7 @@ code repository for this book,</p><p><div class="highlight"><pre>git clone https
 学習アルゴリズムで直接選択できないもののことです。検証データセットは元々のMNIST仕様には含まれていませんが、
 多くの人はMNISTをこのやり方で使っていますし、検証データはニューラルネットワークではよく使われます。
 今後、「MNIST訓練データ」と言った場合は、
-オリジナルの６0,000枚の画像セットではなく、今作った
+オリジナルの60,000枚の画像セットではなく、今作った
 50,000枚の画像からなるデータセットのことを指すこととします。
 
 
@@ -2389,36 +2390,36 @@ MNISTデータとは別に、高速に線形代数を解くことができる<a 
                         <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">sizes</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">sizes</span><span class="p">[</span><span class="mi">1</span><span class="p">:])]</span>
 </pre></div>
 </p><p>
-<tt>sizes</tt>は、それぞれの層におけるニューロンの数を表している。
+<tt>sizes</tt>は、それぞれの層におけるニューロンの数を表しています。
 もし1層目に2つのニューロン、2層目に3つのニューロン、最終層に1つのニューロンを持つ<tt>Network</tt>を作りたいならば、以下のようにコードを定義します。
 
 
 <div class="highlight"><pre><span class="n">net</span> <span class="o">=</span> <span class="n">Network</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
 </pre></div><a name="weight_initialization"></a>
 
-<tt>Network</tt>の中のバイアスと重みは、Numpyの<tt>np.random.randn</tt>によって生成された平均値0・標準偏差1のガウス分布の乱数に初期化される。
-この初期化のための乱数は、確率的勾配降下法の開始点として使用する。今回は乱数によって初期値を決めることにするが、後半の章では、重みとバイアスの初期化のより良い方法を解説する。
+<tt>Network</tt>の中のバイアスと重みは、Numpyの<tt>np.random.randn</tt>によって生成された平均値0・標準偏差1のガウス分布の乱数に初期化されます。
+この初期化のための乱数は、確率的勾配降下法の開始点として使用します。今回は乱数によって初期値を決めることにしますが、後半の章では、重みとバイアスの初期化のより良い方法を解説します。
 <tt>Network</tt>の初期化のコードでは、ニューロンの1層目は入力層であり、バイアスは後半の層から出力を計算するときにだけ使われるので、入力層のニューロンのバイアスは省略する仮定をしていることについて注意してください。</p><p>
 
 Numpy内の行列のリストとしてバイアスと重みは保存されることについても注意してください。
-なので、<tt>net.weights[1]</tt>は、2層目と3層目をつなぐ重みを保存するNumpyの行列である。（Pythonのインデックスは <tt>0</tt>から開始されるので、1層目と2層目を繋ぐ重みではない。）
+なので、<tt>net.weights[1]</tt>は、2層目と3層目をつなぐ重みを保存するNumpyの行列です。（Pythonのインデックスは <tt>0</tt>から開始されるので、1層目と2層目を繋ぐ重みではありません。）
 <tt>net.weights[1]</tt>という記述は冗長なので、ここでは$w$という行列として示しましょう。
 それは、$w_{jk}$という行列で表現されていて、
-2層目の$k$番目のニューロンと3層目の$j$番目のニューロンを繋ぐ重みである。この$j$と$k$の順序は奇妙に見えるかもしれません。
-確かに$j$と$k$を交換するほうが理に適っていそうである。この順序の大きな利点は、ニューロン3層目の活性化のベクトルは以下を意味することである。
+2層目の$k$番目のニューロンと3層目の$j$番目のニューロンを繋ぐ重みです。この$j$と$k$の順序は奇妙に見えるかもしれません。
+確かに$j$と$k$を交換するほうが理に適っていそうです。この順序の大きな利点は、ニューロン3層目の活性化のベクトルは以下を意味することです。
 
 <a class="displaced_anchor" name="eqtn22"></a>\begin{eqnarray}
   a' = \sigma(w a + b).
 \tag{22}\end{eqnarray}
 
 この式では、かなり多くの振る舞いがあるので一つ一つ紐解いてみましょう。$a$は2層目の活性化のベクトルです。$a'$を得るために、私たちは$a$と重み行列$w$を掛け算し、バイアスのベクトル$b$を足し算します。
-私たちは、ベクトル$w a +b$に要素$\sigma$を作用させます。（これは要素$\sigma$の<em>vectorizing</em>と呼ばれます。）
-これによっては、Equation <span id="margin_530827989636_reveal" class="equation_link">(22)</span><span id="margin_530827989636" class="marginequation" style="display: none;"><a href="chap1.html#eqtn22" style="padding-bottom: 5px;" onMouseOver="this.style.borderBottom='1px solid #2A6EA6';" onMouseOut="this.style.borderBottom='0px';">\begin{eqnarray}
+私たちは、ベクトル$w a +b$に関数$\sigma$を作用させます。（これは関数$\sigma$の<em>vectorizing</em>と呼ばれます。）
+等式 <span id="margin_530827989636_reveal" class="equation_link">(22)</span><span id="margin_530827989636" class="marginequation" style="display: none;"><a href="chap1.html#eqtn22" style="padding-bottom: 5px;" onMouseOver="this.style.borderBottom='1px solid #2A6EA6';" onMouseOut="this.style.borderBottom='0px';">\begin{eqnarray}
   a' = \sigma(w a + b) \nonumber\end{eqnarray}</a></span><script>$('#margin_530827989636_reveal').click(function() {$('#margin_530827989636').toggle('slow', function() {});});</script>
-とシグモイドニューロンの出力を計算するための
-Equation <span id="margin_163635338916_reveal" class="equation_link">(4)</span><span id="margin_163635338916" class="marginequation" style="display: none;"><a href="chap1.html#eqtn4" style="padding-bottom: 5px;" onMouseOver="this.style.borderBottom='1px solid #2A6EA6';" onMouseOut="this.style.borderBottom='0px';">\begin{eqnarray}
+が、シグモイドニューロンの出力を計算するための
+等式 <span id="margin_163635338916_reveal" class="equation_link">(4)</span><span id="margin_163635338916" class="marginequation" style="display: none;"><a href="chap1.html#eqtn4" style="padding-bottom: 5px;" onMouseOver="this.style.borderBottom='1px solid #2A6EA6';" onMouseOut="this.style.borderBottom='0px';">\begin{eqnarray}
   \frac{1}{1+\exp(-\sum_j w_j x_j-b)} \nonumber\end{eqnarray}</a></span><script>$('#margin_163635338916_reveal').click(function() {$('#margin_163635338916').toggle('slow', function() {});});</script>
-がと同じ結果を与えることを確認することが簡単になります。
+と同じ結果になることを確認するのは簡単です。
 
 <h4><a name="exercise_695318"></a><a href="#exercise_695318">Exercise</a></h4><ul>
 
@@ -2426,7 +2427,7 @@ Equation <span id="margin_163635338916_reveal" class="equation_link">(4)</span><
   a' = \sigma(w a + b) \nonumber\end{eqnarray}</a></span><script>$('#margin_177086642938_reveal').click(function() {$('#margin_177086642938').toggle('slow', function() {});});</script>
 をベクトルの要素を記述し、そしてシグモイドニューロンの出力を計算するための  Equation <span id="margin_215368916270_reveal" class="equation_link">(4)</span><span id="margin_215368916270" class="marginequation" style="display: none;"><a href="chap1.html#eqtn4" style="padding-bottom: 5px;" onMouseOver="this.style.borderBottom='1px solid #2A6EA6';" onMouseOut="this.style.borderBottom='0px';">\begin{eqnarray}
   \frac{1}{1+\exp(-\sum_j w_j x_j-b)} \nonumber\end{eqnarray}</a></span><script>$('#margin_215368916270_reveal').click(function() {$('#margin_215368916270').toggle('slow', function() {});});</script>
-と同じ結果を与えることを確認せよ。
+と同じ結果を与えることを確認しましょう。
 
 </ul></p><p>こうした流れで、<tt>Network</tt> から出力を計算するコードを記述するのは簡単なことがわかります。
 シグモイド関数を定義することからはじめます。このとき、シグモイド関数はベクトル形式でNumpyを使って定義します。
@@ -2437,9 +2438,9 @@ Equation <span id="margin_163635338916_reveal" class="equation_link">(4)</span><
 <span class="n">sigmoid_vec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vectorize</span><span class="p">(</span><span class="n">sigmoid</span><span class="p">)</span>
 </pre></div>
 
-ネットワークの入力<tt>a</tt> が与えられたら、対応した出力を返す<tt>feedforward</tt>を<tt>Network</tt>クラスに追加します。全ての方法は、層ごとにEquation <span id="margin_323063151061_reveal" class="equation_link">(22)</span><span id="margin_323063151061" class="marginequation" style="display: none;"><a href="chap1.html#eqtn22" style="padding-bottom: 5px;" onMouseOver="this.style.borderBottom='1px solid #2A6EA6';" onMouseOut="this.style.borderBottom='0px';">\begin{eqnarray}
+ネットワークの入力<tt>a</tt> が与えられたら、対応した出力を返す<tt>feedforward</tt>を<tt>Network</tt>クラスに追加します。このメソッドは、層ごとに等式 <span id="margin_323063151061_reveal" class="equation_link">(22)</span><span id="margin_323063151061" class="marginequation" style="display: none;"><a href="chap1.html#eqtn22" style="padding-bottom: 5px;" onMouseOver="this.style.borderBottom='1px solid #2A6EA6';" onMouseOut="this.style.borderBottom='0px';">\begin{eqnarray}
   a' = \sigma(w a + b) \nonumber\end{eqnarray}</a></span><script>$('#margin_323063151061_reveal').click(function() {$('#margin_323063151061').toggle('slow', function() {});});</script>
-が適用されます。
+を適用します。
 
 <div class="highlight"><pre>    <span class="k">def</span> <span class="nf">feedforward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Return the output of the network if &quot;a&quot; is input.&quot;&quot;&quot;</span>
@@ -2478,16 +2479,16 @@ Equation <span id="margin_163635338916_reveal" class="equation_link">(4)</span><
                 <span class="k">print</span> <span class="s">&quot;Epoch {0} complete&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
 </pre></div>
 </p><p>
-<tt>training_data</tt>は、訓練入力と対応した目的出力の組からなる<tt>(x, y)</tt>です。
+<tt>training_data</tt>は、訓練入力と対応した目的出力の組<tt>(x, y)</tt>のリストです。
 変数<tt>epochs</tt>と<tt>mini_batch_size</tt>は訓練のための世代数と、サンプリングするときに使用するミニバッチの大きさです。
-変数<tt>eta</tt>は訓練率$\eta$です。
-もしオプションの引数<tt>test_data</tt>がある場合、プログラムは各訓練の世代のあとにネットワークを評価して、逐次に性能を出力する。
-この機能は性能改善の進行状況を確認するときに役に立つが、計算に少し時間がかかるようになる。
+変数<tt>eta</tt>は学習率$\eta$です。
+もしオプションの引数<tt>test_data</tt>がある場合、プログラムは各訓練のエポックのあとにネットワークを評価して、現在の進行状況を出力します。
+この機能は性能改善の進行状況を確認するときに役に立ちますが、計算に少し時間がかかるようになります。
 </p><p>
-コードは以下のように機能する。各世代では、訓練データをランダムにシャッフルすることによって開始し、適切なサイズのミニバッチに分割します。
+コードは以下のように機能します。各エポックでは、訓練データをランダムにシャッフルすることによって開始し、適切なサイズのミニバッチに分割します。
 このコードは、訓練データからランダムにサンプルする簡単な方法になります。
 各ミニバッチに、勾配降下法を1ステップ実行します。これは、コード<tt>self.update_mini_batch(mini_batch, eta)</tt>によって行われ、
-ミニバッチの訓練データだけを使用した勾配降下法を1回の計算に基づいてネットワークの重みとバイアスを更新します。ここに、<tt>update_mini_batch</tt>のコードを示します。
+ミニバッチの訓練データだけを使用して勾配降下法を実行し、ネットワークの重みとバイアスを更新します。ここに、<tt>update_mini_batch</tt>のコードを示します。
 
 <div class="highlight"><pre>    <span class="k">def</span> <span class="nf">update_mini_batch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mini_batch</span><span class="p">,</span> <span class="n">eta</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Update the network&#39;s weights and biases by applying</span>
@@ -2522,7 +2523,7 @@ Equation <span id="margin_163635338916_reveal" class="equation_link">(4)</span><
 $\sigma$関数の導関数を計算する<tt>sigmoid_prime</tt>、ベクトル形式の<tt>sigmoid_prime_vec</tt>と<tt>self.cost_derivative</tt>です。
 次の章で詳細を確認しますが、コードと説明を見る事によって要点を理解する事ができます。
 プログラムが長いように見えますが、多くはプログラム内の理解を促すための解説文であり、コード自体は理解が簡単に書いているつもりです。
-実際、プログラムはたった空行と解説を除いて74行である。
+実際、プログラムはたった空行と解説を除いて74行です。
 コードのすべては<a href="https://github.com/mnielsen/neural-networks-and-deep-learning/blob/master/code/network.py">GitHub</a>で見つけることができます。</p><p></p><p><div class="highlight"><pre><span class="sd">&quot;&quot;&quot;</span>
 
 
@@ -2673,7 +2674,7 @@ $\sigma$関数の導関数を計算する<tt>sigmoid_prime</tt>、ベクトル�
 </pre></div>
 </p><p>それでは、このコードがどれだけ良く手書き数字を認識できるかを確認していきましょう。
 まずはMNISTデータをダウンロードするところからはじめてみよう。
-ここでは<tt>mnist_loader.py</tt>を使用する。以下のコマンドをpythonシェルで実行してください。
+ここでは<tt>mnist_loader.py</tt>を使用します。以下のコマンドをpythonシェルで実行してください。
 
 </p><p><div class="highlight"><pre><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">mnist_loader</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">training_data</span><span class="p">,</span> <span class="n">validation_data</span><span class="p">,</span> <span class="n">test_data</span> <span class="o">=</span> \
@@ -2696,13 +2697,13 @@ $\sigma$関数の導関数を計算する<tt>sigmoid_prime</tt>、ベクトル�
 2014年における一般的なスペックのパソコンならば、訓練の1世代ごとに数分程度かかります。
 計算を実行しつつ、読み続けて、たまに計算結果を確認することをおすすめします。
 もしあなたが急いでいる場合は、あなたは世代数を減らすか、隠れニューロンの数を減らすか、訓練データの一部のみ使用することによって計算を速くすることができます。
-実際の商用コードはより速く計算が可能でありますが、
+実際の商用コードはより速く計算が可能ですが、
 このpythonコードはニューラルネットワークを理解することを助けることが目的であるため、計算が早いわけではありません。
-もちろん、私たちは多くのコンピュータープラットホーム上で非常に高速に実行可能なネットワークを訓練してきた。
-例えば、webブラウザや携帯デバイスのアプリの中でjavascriptで実行できる簡単に移植可能なもので、ネットワークの重みとバイアスの良いセットの訓練を行ってきた。
-それでは以下に、ニューラルネットワークのある訓練プロセスの一部の結果を示しました。
-この出力は訓練の世代ごとにニューラルネットワークを使用して適切に訓練データを認識できた数を表している。
-最初の世代が終わったあとに10000個中の9129個が正しく認識できており、その後は増加し続けていることがわかる。
+もちろん、一度ニューラルネットワークを訓練すれば、私たちは多くのコンピュータープラットホーム上で非常に高速に実行することができます。
+例えば、ニューラルネットワークの重みとバイアスの良いセットがあれば、webブラウザのJavascriptや、携帯デバイスのアプリに移植し、実行するのは簡単です。
+それでは以下に、ニューラルネットワークのある訓練プロセスの一部の結果を示しましょう。
+この出力は訓練のエポックごとにニューラルネットワークを使用して適切に訓練データを認識できた数を表しています。
+最初の世代が終わったあとに10000個中の9129個が正しく認識できており、その後は増加し続けていることがわかります。
 </p><p><div class="highlight"><pre>Epoch 0: 9129 / 10000
 Epoch 1: 9295 / 10000
 Epoch 2: 9348 / 10000
@@ -2712,11 +2713,11 @@ Epoch 28: 9542 / 10000
 Epoch 29: 9534 / 10000
 </pre></div>
 </p><p>
-訓練されたネットワークは95%の分類率を有しており、ピーク性能は28世代での95.42%であった。
-この結果は、最初の試みとしては大変有望である。
+訓練されたネットワークは95%の分類率を有しており、ピーク性能は28世代での95.42%でした。
+この結果は、最初の試みとしては大変有望です。
 ネットワークをランダムな重みとバイアスによって初期化しているので、
 このコードを実行したとしても、上記で示した値と全く一緒になるとは限らないことに注意してください。
-この章では、3回の計算のうちのベストの解を示している。</p><p>
+この章では、3回の計算のうちのベストの解を示しています。</p><p>
 
 それでは、隠れニューロンの数を100個にして上記の実験を再計算してみましょう。
 この計算も同様に時間がかかりますので、計算を実行しつつ読み進めることが賢明です。（今回の場合、隠れニューロンの数が多いので各世代での計算時間がよりかかるので。）
@@ -2732,9 +2733,9 @@ Epoch 29: 9534 / 10000
 3章で紹介するテクニックを使用することで、計算ごとの予測性能の違いを劇的に減らすことができます。</span>
 
 </p><p>
-もちろん、これらの精度を獲得するために、訓練の世代数、ミニバッチのサイズ、訓練率$\eta$を具体的に選択しなくてはならなかった。
-上記のように、学習アルゴリズムによって学習するパラメータ（重みとバイアス）と区別するために、これらはニューラルネットワークのハイパーパラメータとして呼ばれている。
-もしハイパーパラメータを不適切に選択したならば、悪い結果を得ることになる。例えば、学習率$\eta = 0.001$を選んだとすると、
+もちろん、これらの精度を獲得するために、訓練のエポック数、ミニバッチのサイズ、学習率$\eta$を具体的に選択しなくてはなりませんでした。
+上記のように、学習アルゴリズムによって学習するパラメータ（重みとバイアス）と区別するために、これらはニューラルネットワークのハイパーパラメータとして呼ばれています。
+もしハイパーパラメータを不適切に選択したならば、悪い結果を得ることになります。例えば、学習率$\eta = 0.001$を選んだとすると、
 
 </p><p><div class="highlight"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">net</span> <span class="o">=</span> <span class="n">network</span><span class="o">.</span><span class="n">Network</span><span class="p">([</span><span class="mi">784</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">net</span><span class="o">.</span><span class="n">SGD</span><span class="p">(</span><span class="n">training_data</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">0.001</span><span class="p">,</span> <span class="n">test_data</span><span class="o">=</span><span class="n">test_data</span><span class="p">)</span>
@@ -2749,15 +2750,15 @@ Epoch 28: 2123 / 10000
 Epoch 29: 2142 / 10000
 </pre></div>
 
-しかしながら、ネットワークの予測性能はゆっくりと良くなっていくことがわかる。
+しかしながら、ネットワークの予測性能はゆっくりと良くなっていくことがわかります。
 これは学習率を大きくすべきということを提案しているので、学習率$\eta = 0.01$にしてみましょう。
 この設定で計算した場合、より良い結果を得ることができます。この結果は、さらに学習率を増加させたほうが良いことを意味します。
 （もし変更を与えて性能が改善したならば、さらに変更を大きくさせてみてください。）
 数回にわたって再計算を行ったならば、学習率は前の実験で使用した値に近い$\eta = 1.0$程度になるでしょう。
 最初にハイパーパラメータの不適切な選択をしたにもかかわらず、少なくともハイパーパラメータを選び方について性能を改善する情報を得ることができました。</p><p>
 
-たいていの場合、ニューラルネットワークをデバッグすることは挑戦的なことであると言えます。
-ハイパーパラメータの初期の選択がランダムノイズの結果とほぼ同然と考えられるようなときは、特に挑戦である。
+たいていの場合、ニューラルネットワークをデバッグすることは困難なことであると言えます。
+ハイパーパラメータの初期の選択が悪く、ランダムノイズとほぼ同然の結果しか得られないときは、特に困難です。
 私たちは前に使用した隠れニューロンが30個のネットワークにおいて、学習率を$\eta = 100.0$に変更した場合を仮定してみましょう。
 <div class="highlight"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">net</span> <span class="o">=</span> <span class="n">network</span><span class="o">.</span><span class="n">Network</span><span class="p">([</span><span class="mi">784</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">net</span><span class="o">.</span><span class="n">SGD</span><span class="p">(</span><span class="n">training_data</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">100.0</span><span class="p">,</span> <span class="n">test_data</span><span class="o">=</span><span class="n">test_data</span><span class="p">)</span>
@@ -2776,11 +2777,11 @@ Epoch 29: 2142 / 10000
 
 初めてこの問題に直面したことを、今想像してみてください。
 もちろん、私たちは前の実験を知っていて、学習率を下げることが正しいことだということを今は<em>知っています</em> 。
-しかし、この問題に初めて直面する場合、多くの出力結果は、何をすべきかを教えてはくれません。
+しかし、この問題に初めて直面する場合、出力結果は、何をすべきかを教えてはくれません。
 学習率だけでなく、ニューラルネットワークの他の全ての側面について心配するかもしれません。
 ネットワークが学習することを難しくさせるような方法で重みとバイアスを初期化したのかもしれないと疑うかもしれません。
 それとも、意味のある学習をするための十分な訓練データを持っていないと思うかもしれません。
-十分な世代数を計算していないのかもしれない？手書き数字を認識するために学習することはニューラルネットワークでは不可能と思うかもしれない。
+十分なエポック数を計算していないのかもしれない？手書き数字を認識するために学習することはニューラルネットワークでは不可能と思うかもしれません。
 学習率が<em>低すぎる</em>かもしれない、それとも高すぎる？
 はじめて、この問題に直面する際は、常に何もわからない状態にあるのです。
 
@@ -2788,14 +2789,14 @@ Epoch 29: 2142 / 10000
 これらの疑問を取り除くためのニューラルネットワークのデバッグとしてのレッスンは些細な問題ではありません、そして通常のプログラミングに関して言えば、関係した技術があります。
 ニューラルネットワークから良い結果を得るためのデバッグ技術を学ぶ必要があります。
 より一般的に言えば、私たちは良いハイパーパラメータと良いアーキテクチャを選択するためのヒューリスティック技術を開発する必要があります。
-この本を通して、上記のハイパーパラメータの設定した方法を含むこれらの技術について解説します。
+この本を通して、上記のハイパーパラメータの設定方法を含むこれらの技術について解説します。
 
 </p><p>
 <h4><a name="exercise_420023"></a><a href="#exercise_420023">Exercise</a></h4><ul></p><p><li>
 隠れ層がない入力層と出力層のみの2層のネットワークを作ってみてください。それぞれニューロンは、784個と10個です。そして、確率的勾配法で学習させてみてください。どんな分類精度を達成できるでしょうか。
 </ul></p><p></p><p>
-以前、MNISTデータのロード方法の詳細について説明を省略していました。かなり簡単であるが、念のためにコードを以下に載せました。
-MNISTデータを格納するために使われるデータ構造は、資料内の解説にある通りで、Numpyの<tt>ndarray</tt>オブジェクトである。（もし<tt>ndarray</tt>に馴染みがない方は、ベクトルとして考えてください。）
+以前、MNISTデータのロード方法の詳細について説明を省略していました。かなり簡単ではありますが、念のためにコードを以下に載せました。
+MNISTデータを格納するために使われるデータ構造は、資料内の解説にある通りで、Numpyの<tt>ndarray</tt>オブジェクトです。（もし<tt>ndarray</tt>に馴染みがない方は、ベクトルとして考えてください。）
 
 </p><p><div class="highlight"><pre><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">mnist_loader</span>
@@ -2907,7 +2908,7 @@ MNISTデータを格納するために使われるデータ構造は、資料内
 </p><p>もしscikit-learnのSVM分類器のデフォルト設定で計算したとすれば、10000個の画像中の9435個を適切に分類できます。（コードは<a href="https://github.com/mnielsen/neural-networks-and-deep-learning/blob/master/code/mnist_svm.py">ここ</a>にあります。）
 黒色の平均値に基づく分類から考えると、とても大きな改善です。
 確かに、SVMはだいたいニューラルネットワークと同じくらいか、ちょっと悪いくらいの性能を持っています。
-この章の後半では、私たちはSVMをはるかに超える良い性能を得るために、ニューラルネットワークを改良する新技術を紹介します。
+後の章では、私たちはSVMをはるかに超える良い性能を得るために、ニューラルネットワークを改良する新技術を紹介します。
 
 </p><p>話はこれで終わりではありません。
 10000個中の9435個の適切な分類は、scikit-learnのデフォルト設定のSVMによるものでした。
@@ -2923,13 +2924,13 @@ Muellerは、SVMのパラメータを最適化することで、98.5%の予測�
   Wan</a>、 <a href="http://www.matthewzeiler.com/">Matthew Zeiler</a>,、Sixin
 Zhang、<a href="http://yann.lecun.com/">Yann LeCun</a>、
 <a href="http://cs.nyu.edu/&#126;fergus/pmwiki/pmwiki.php">Rob Fergus</a>によって行われたものです。
-この本の中の後半で、彼らが使用した技術の多くを見ることができます。その性能のレベルは人間とほぼ同等であり、おそらくより良い。
-なぜならば、人間が自信を持って認識することさえ難しいMNIST画像がいくつかあるからである。例えば以下のようなものである。
+この本の中の後半で、彼らが使用した技術の多くを見ることができます。その性能のレベルは人間とほぼ同等であり、おそらくより良いものです。
+なぜならば、人間が自信を持って認識することさえ難しいMNIST画像がいくつかあるからです。例えば以下のようなものです。
 
 </p><p><center><img src="images/mnist_really_bad_images.png" width="560px"></center></p><p>
 これらを分類するのは難しいと認めることを確信しています。MNISTデータセットの中でこのような画像があるのにもかかわらず、ニューラルネットワークは10000個の画像の中の21個以外は適切に分類できることは驚くべきことです。
 プログラミングをするとき、たいていはMNISTの識字を理解するような複雑な問題を解くことは、高度なアルゴリズムが必要だと考えています。
-しかし、Wanらのペーパーの中で言及したニューラルネットワークはかなりシンプルなアルゴリズムを意味している。私たちがこの章で見てきたアルゴリズムのバリエーションも含んでいる。
+しかし、Wanらのペーパーの中で言及したニューラルネットワークはかなりシンプルなアルゴリズムを意味しています。私たちがこの章で見てきたアルゴリズムのバリエーションも含んでいます。
 
 <center>
   高度なアルゴリズム $\leq$ シンプルな学習アルゴリズム + 良い訓練データ
