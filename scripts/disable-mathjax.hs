@@ -20,4 +20,4 @@ process fn = do
   where
 
     goodLine :: T.Text -> Bool
-    goodLine = not . T.isInfixOf "http://cdn.mathjax.org/mathjax/latest/MathJax.js"
+    goodLine = not . T.isInfixOf "https://cdn.mathjax.org/mathjax/latest/MathJax.js"
