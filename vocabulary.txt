@@ -10,7 +10,7 @@ chapter			章
 computer vision		コンピュータ視覚？
 cost function		コスト関数(costとだけ書かれている時も「コスト関数」と訳している)
 deep learning		深層学習
-deep network           深いネットワーク(shallow networkの対義語)
+deep network		深いネットワーク(shallow networkの対義語)
 derivative		微分（or 導関数？）
 design			設計
 early stopping		早期打ち切り
@@ -27,7 +27,7 @@ handwritten digits	手書き数字
 heuristics		ヒューリスティクス
 hyper-parameter		ハイパーパラメータ
 input/output		（ニューラルネットワークの）入力/出力
-intermediate layer     中間層
+intermediate layer	中間層
 layer			層
 learning rate		学習率
 linear			線形（線型？）
@@ -35,28 +35,28 @@ mini-batch		ミニバッチ
 model			モデル
 network	 		ニューラルネットワーク(network単体でニューラルネットワークを意味している場合。)
 neuron			ニューロン
-overfitting 過適合
-overtraining 過学習
+overfitting 		過適合
+overtraining 		過学習
 perturbation		摂動
 quadratic cost function	2乗コスト関数
-recognizer     認識器
+recognizer     		認識器
 recurrent neural networks	再帰型ニューラルネットワーク
 rectified linear unit		Rectified Linear Unit/ReLU
-regularization 正規化（混用解消のため、規格化から使用数の多かった正規化に統一。）
+regularization 		正規化（混用解消のため、規格化から使用数の多かった正規化に統一。）
 saturation/saturated	飽和/飽和している
-shallow network        浅いネットワーク(deep networkの対義語)
+shallow network        	浅いネットワーク(deep networkの対義語)
 step function		ステップ関数
 stochastic gradient descent 確率的勾配降下法
-technique       手法
+technique       	手法
 training example        訓練例
 training data           訓練データ
 test data               試験データ
 toy network             トイネットワーク
 universal               万能な(for computation)
 universality theorem	普遍性定理
-validation set 検証データ・セット
+validation set 		検証データ・セット
 vanishing gradient problem    勾配消失問題
 vector			ベクトル
 weight	　　　 		重み(パーセプトロンの)
-weight decay        重み減衰
+weight decay        	重み減衰
 weighted input		重み付き入力
