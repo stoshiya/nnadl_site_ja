@@ -10,6 +10,7 @@ chapter			章
 computer vision		コンピュータ視覚？
 cost function		コスト関数(costとだけ書かれている時も「コスト関数」と訳している)
 deep learning		深層学習
+deep network           深いネットワーク(shallow networkの対義語)
 derivative		微分（or 導関数？）
 design			設計
 early stopping		早期打ち切り
@@ -17,6 +18,7 @@ epoch			エポック（訓練データ全体を1巡する事）
 error	 		誤差
 evidence		情報(パーセプトロンの入力として使われる場合。「証拠」では変なので…代案求む)
 exercise		演習
+exploding gradient problem    勾配爆発問題
 feed forward		フィードフォワード
 feed forward network	フィードフォワードネットワーク
 gradient		勾配
@@ -25,6 +27,7 @@ handwritten digits	手書き数字
 heuristics		ヒューリスティクス
 hyper-parameter		ハイパーパラメータ
 input/output		（ニューラルネットワークの）入力/出力
+intermediate layer     中間層
 layer			層
 learning rate		学習率
 linear			線形（線型？）
@@ -41,15 +44,18 @@ recurrent neural networks	再帰型ニューラルネットワーク
 rectified linear unit		Rectified Linear Unit/ReLU
 regularization 正規化（混用解消のため、規格化から使用数の多かった正規化に統一。）
 saturation/saturated	飽和/飽和している
+shallow network        浅いネットワーク(deep networkの対義語)
 step function		ステップ関数
 stochastic gradient descent 確率的勾配降下法
 technique       手法
 training example        訓練例
 training data           訓練データ
 test data               試験データ
+toy network             トイネットワーク
 universal               万能な(for computation)
 universality theorem	普遍性定理
 validation set 検証データ・セット
+vanishing gradient problem    勾配消失問題
 vector			ベクトル
 weight	　　　 		重み(パーセプトロンの)
 weight decay        重み減衰
