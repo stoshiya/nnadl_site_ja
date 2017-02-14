@@ -2,8 +2,10 @@
 accuracy		精度
 activation		活性
 activation function	活性化関数
+adversarial		adversarialのまま（adversarial imageなど）
 backpropagation		逆伝播（「誤差逆伝播」が一般的な訳語だと思います）
 bias			バイアス(パーセプトロンの)
+Boltzmann machine	ボルツマンマシン
 c.f.	 		参考：
 chain rule		連鎖律
 chapter			章
@@ -13,14 +15,19 @@ deep learning		深層学習
 deep network		深いネットワーク(shallow networkの対義語)
 derivative		微分（or 導関数？）
 design			設計
+dropout			ドロップアウト
 early stopping		早期打ち切り
+ensemble		アンサンブル
 epoch			エポック（訓練データ全体を1巡する事）
 error	 		誤差
 evidence		情報(パーセプトロンの入力として使われる場合。「証拠」では変なので…代案求む)
 exercise		演習
 exploding gradient problem    勾配爆発問題
+feature map		特徴マップ
 feed forward		フィードフォワード
 feed forward network	フィードフォワードネットワーク
+generative model	生成モデル
+germ theory of disease	胚種説
 gradient		勾配
 gradient descent	勾配降下法
 handwritten digits	手書き数字
@@ -28,9 +35,14 @@ heuristics		ヒューリスティクス
 hyper-parameter		ハイパーパラメータ
 input/output		（ニューラルネットワークの）入力/出力
 intermediate layer	中間層
+kernel			カーネル
 layer			層
 learning rate		学習率
 linear			線形（線型？）
+long short-term memory	長期短期記憶
+L2 pooling		L2プーリング
+L2 regularization	L2正規化		
+max-pooling		Maxプーリング
 mini-batch		ミニバッチ
 model			モデル
 network	 		ニューラルネットワーク(network単体でニューラルネットワークを意味している場合。)
@@ -43,13 +55,19 @@ recognizer     		認識器
 recurrent neural networks	再帰型ニューラルネットワーク
 rectified linear unit		Rectified Linear Unit/ReLU
 regularization 		正規化（混用解消のため、規格化から使用数の多かった正規化に統一。）
+reinforcement learning	強化学習
 saturation/saturated	飽和/飽和している
 shallow network        	浅いネットワーク(deep networkの対義語)
+shared bias		共有バイアス
+shared weights		共有重み
+softmax function	ソフトマックス関数
+speech recognition	音声認識
 step function		ステップ関数
 stochastic gradient descent 確率的勾配降下法
 technique       	手法
 training example        訓練例
 training data           訓練データ
+transfer learning	転移学習
 test data               試験データ
 toy network             トイネットワーク
 universal               万能な(for computation)
