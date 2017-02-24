@@ -268,7 +268,7 @@ that we could easily figure out an appropriate weight and bias by
 hand, without using a learning algorithm.  However, it turns out to be
 illuminating to use gradient descent to attempt to learn a weight and
 bias.  So let's take a look at how the neuron learns.</p>-->
-<p>バカバカしいほど簡単なことをするためにこのニューロンを学習させます。入力1に対して出力0を返すようにします。もちろんこれは適当な重みとバイアスをすぐに手計算でき、学習アルゴリズムを使わないですむような自明な作業です。しかし、再急降下法を使って重みとバイアスを計算することは理解に役立ちます。ですから、ニューロンがどのように学ぶかを見てみましょう。</p>
+<p>バカバカしいほど簡単なことをするためにこのニューロンを学習させます。入力1に対して出力0を返すようにします。もちろんこれは適当な重みとバイアスをすぐに手計算でき、学習アルゴリズムを使わないですむような自明な作業です。しかし、最急降下法を使って重みとバイアスを計算することは理解に役立ちます。ですから、ニューロンがどのように学ぶかを見てみましょう。</p>
 <!--<p>To make things definite, I'll pick the initial weight to be $0.6$ and
 the initial bias to be $0.9$.  These are generic choices used as a
 place to begin learning, I wasn't picking them to be special in any
@@ -489,7 +489,7 @@ in <span id="margin_607315497502_reveal" class="equation_link">(57)</span><span 
 logarithms are of numbers in the range $0$ to $1$, and thus are
 negative; and (b) there is a minus sign out the front.</p>-->
 <p>
-二つの性質によりクロスエントロピーはコスト関数であると解釈できます。一つにはそれは非負、つうまり$C>0$であることです。このことを知るには、式<span id="margin_607315497502_reveal" class="equation_link">(57)</span><span id="margin_607315497502" class="marginequation" style="display: none;"><a href="chap3.html#eqtn57" style="padding-bottom: 5px;" onMouseOver="this.style.borderBottom='1px solid #2A6EA6';" onMouseOut="this.style.borderBottom='0px';">\begin{eqnarray}
+二つの性質によりクロスエントロピーはコスト関数であると解釈できます。一つにはそれは非負、つまり$C>0$であることです。このことを知るには、式<span id="margin_607315497502_reveal" class="equation_link">(57)</span><span id="margin_607315497502" class="marginequation" style="display: none;"><a href="chap3.html#eqtn57" style="padding-bottom: 5px;" onMouseOver="this.style.borderBottom='1px solid #2A6EA6';" onMouseOut="this.style.borderBottom='0px';">\begin{eqnarray}
   C = -\frac{1}{n} \sum_x \left[y \ln a + (1-y ) \ln (1-a) \right] \nonumber\end{eqnarray}</a></span><script>$('#margin_607315497502_reveal').click(function() {$('#margin_607315497502').toggle('slow', function() {});});</script>のすべての項が正であることを確認すればいいです。これは、(a)両方のlogの引数が0から1の範囲なのでその値は負になり、(b)前にマイナス符号が付いているからです。
 </p>
 <!--<p>Second, if the neuron's actual output is close to the desired output,
