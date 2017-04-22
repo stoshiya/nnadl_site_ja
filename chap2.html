@@ -1389,13 +1389,13 @@ where the sum is over all neurons $k$ in the output layer.-->
   \delta^L_j = \sum_k \frac{\partial C}{\partial a^L_k} \frac{\partial a^L_k}{\partial z^L_j}.
 \tag{37}\end{eqnarray}
 ここで、和は出力層のすべてのニューロン$k$について足し合わせます。
-<!--Of course, the output activation $a^L_k$ of the $k^{\rm th}$ neuron depends only on the input weight $z^L_j$ for the $j^{\rm th}$ neuron when $k = j$.
+<!--Of course, the output activation $a^L_k$ of the $k^{\rm th}$ neuron depends only on the weighted input $z^L_j$ for the $j^{\rm th}$ neuron when $k = j$.
 And so $\partial a^L_k / \partial z^L_j$ vanishes when $k \neq j$.  As
 a result we can simplify the previous equation to
 <a class="displaced_anchor" name="eqtn38"></a>\begin{eqnarray}
   \delta^L_j = \frac{\partial C}{\partial a^L_j} \frac{\partial a^L_j}{\partial z^L_j}.
 \tag{38}\end{eqnarray}-->
-もちろん、$k=j$の時には、$k$番目のニューロンの出力活性$a^L_k$は、$j$番目のニューロンの入力の重みにのみ依存します。
+もちろん、$k=j$の時には、$k$番目のニューロンの出力活性$a^L_k$は、$j$番目のニューロンの重み付き入力$z^L_j$にのみ依存します。
 従って、$k\neq j$の時には$\partial a^L_k / \partial z^L_j$の値は$0$です。
 結果として前述の式を以下のように簡略化できます
 <a class="displaced_anchor" name="eqtn38"></a>\begin{eqnarray}
