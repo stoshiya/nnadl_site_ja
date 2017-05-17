@@ -53,7 +53,7 @@
 </head>
 <body>
 <!--<div class="nonumber_header"><h2><a href="index.html">Neural networks and deep learning</a></h2></div>-->
-<div class="nonumber_header"><h2>Appendix: 知性を持つ <i>単純な</i> アルゴリズムはあるか</h2></div>
+<div class="nonumber_header"><h2>Appendix: 知性のある <i>シンプルな</i> アルゴリズムはあるか</h2></div>
 
 <div class="section"><div id="toc">
     <p class="toc_title"><a href="index.html">ニューラルネットワークと深層学習</a></p><p class="toc_not_mainchapter"><a href="about.html">What this book is about</a></p><p class="toc_not_mainchapter"><a href="exercises_and_problems.html">On the exercises and problems</a></p><p class='toc_mainchapter'><a id="toc_using_neural_nets_to_recognize_handwritten_digits_reveal" class="toc_reveal" onMouseOver="this.style.borderBottom='1px solid #2A6EA6';" onMouseOut="this.style.borderBottom='0px';"><img id="toc_img_using_neural_nets_to_recognize_handwritten_digits" src="images/arrow.png" width="15px"></a><a href="chap1.html">ニューラルネットワークを用いた手書き文字認識</a><div id="toc_using_neural_nets_to_recognize_handwritten_digits" style="display: none;"><p class="toc_section"><ul><a href="chap1.html#perceptrons"><li>Perceptrons</li></a><a href="chap1.html#sigmoid_neurons"><li>Sigmoid neurons</li></a><a href="chap1.html#the_architecture_of_neural_networks"><li>The architecture of neural networks</li></a><a href="chap1.html#a_simple_network_to_classify_handwritten_digits"><li>A simple network to classify handwritten digits</li></a><a href="chap1.html#learning_with_gradient_descent"><li>Learning with gradient descent</li></a><a href="chap1.html#implementing_our_network_to_classify_digits"><li>Implementing our network to classify digits</li></a><a href="chap1.html#toward_deep_learning"><li>Toward deep learning</li></a></ul></p></div>
@@ -191,8 +191,18 @@ href="faq.html">FAQ</a> first.</p>
 
 <p>
     <!--
-    
+In this book, we've focused on the nuts and bolts of neural networks:
+how they work, and how they can be used to solve pattern recognition
+problems.  This is material with many immediate practical
+applications.  But, of course, one reason for interest in neural nets
+is the hope that one day they will go far beyond such basic pattern
+recognition problems.  Perhaps they, or some other approach based on
+digital computers, will eventually be used to build thinking machines,
+machines that match or surpass human intelligence?  This notion far
+exceeds the material discussed in the book - or what anyone in the
+world knows how to do.  But it's fun to speculate.
 -->
+
     この書籍の中ではこれまで、ニューラルネットワークのいろはを学んできました。
     例えば、それがどうやって動くのかや、パターン認識問題に対してどのように用いることができるのかについてです。
     これらは、より直近で実用的に応用するための材料になります。といってももちろん、ニューラルネットワークに興味を抱く理由はそれだけではありません。
@@ -200,91 +210,57 @@ href="faq.html">FAQ</a> first.</p>
     もしかしたら、ニューラルネットワークやそれに変わる他のデジタルコンピューティングの手法が、考える機械や、人間の知性を凌駕するものを産むことになるかもしれません。
     そういった考えは、この書籍の範囲をゆうに超えるでしょう。まあ世界で誰かは知っているかもしれませんし、考えるのは面白そうですよね。
 </p>
+
 <p>
+    <!--
+There has been much debate about whether it's even <em>possible</em> for
+computers to match human intelligence.  I'm not going to engage with
+that question.  Despite ongoing dispute, I believe it's not in serious
+doubt that an intelligent computer is possible - although it may be
+extremely complicated, and perhaps far beyond current technology -
+and current naysayers will one day seem much like the
+<a href="https://en.wikipedia.org/wiki/Vitalism">vitalists</a>.
+-->
+
     コンピュータが人間の知性に匹敵するものに<em>なり得るかどうか</em>については、これまで非常によく議論されてきました。
     といっても私はその問いについて考えるつもりはありません。議論は進行中ではありますが、知性あるコンピュータは作れるだろうと私は信じています
     （それは非常に込み入っていて、もしかしたら今の技術とは全く違ったものになるかもしれませんが）。
     それにそのうち、今の否定論者はかつての<a href="https://ja.wikipedia.org/wiki/生気論">生気論</a>者のように見えることになるでしょう。
 </p>
-<p>
-
-
 
 <p>
     <!--
-<em>Neural networks and deep learning</em> is a free online book.  The
-book will teach you about:
+Rather, the question I explore here is whether there is a
+<em>simple</em> set of principles which can be used to explain
+intelligence?  In particular, and more concretely, is there a
+<em>simple algorithm for intelligence</em>?
 -->
-    「ニューラルネットワークと深層学習」は無料のオンライン書籍です。
-    この本では、次のような内容を扱います。
-    <!--
-<ul>
-<li>Neural networks, a beautiful biologically-inspired programming
-paradigm which enables a computer to learn from observational data
-
-<li>Deep learning, a powerful set of techniques for learning in neural
-networks
-
-</ul>-->
-
-
-<ul>
-    <li>ニューラルネットワーク：コンピュータに、観測データにもとづいて学習する能力を与える、生物学にヒントを得たプログラミングパラダイム。
-    <li>深層学習：ニューラルネットワークに学習をさせるための強力な手法。
-</ul>
-
-
-<!--
-Neural networks and deep learning currently provide the best solutions
-to many problems in image recognition, speech recognition, and natural
-language processing.  This book will teach you the core concepts
-behind neural networks and deep learning. -->
-
-ニューラルネットワークと深層学習は、現時点において、画像認識、音声認識、自然言語処理などの分野の様々な
-問題に対して、最も優れた解決策を与える手法です。この本では、ニューラルネットワークと深層学習の背後にある
-核心的概念を扱います。
-
+    むしろ、知能を説明することのできる一連の<em>シンプルな</em>原理があるかどうかについて、ここでは取り組もうと思います。
+    具体的には特に、<em>知性のあるシンプルなアルゴリズムはあるか</em>どうか考えましょう。
 </p>
 
 <p>
     <!--
-      The book is currently an incomplete beta draft.  More chapters will be
-    added over the coming months. For now, you can:
-      -->
-    この本は現時点では未完成のベータ版原稿です。著者によれば、数ヶ月のうちに追加の章を執筆するつもりのようです。
-    今は、以下の章が読めます。。
-
+The idea that there is a truly simple algorithm for intelligence is a
+bold idea.  It perhaps sounds too optimistic to be true.  Many people
+have a strong intuitive sense that intelligence has considerable
+irreducible complexity.  They're so impressed by the amazing variety
+and flexibility of human thought that they conclude that a simple
+algorithm for intelligence must be impossible.  Despite this
+intuition, I don't think it's wise to rush to judgement.  The history
+of science is filled with instances where a phenomenon initially
+appeared extremely complex, but was later explained by some simple but
+powerful set of ideas.
+-->
+    正しく知性のあるシンプルなアルゴリズムがあるというアイデアは、少々大胆です。
+    本当だと思うのは楽観的すぎるように聞こえます。
+    大抵の人はおそらく、感覚的に、知性とは相当複雑で割り切れないものだと感じるのではないでしょうか。
+    人間の思考が驚くほどバラエティに富んでいて、柔軟であることを思えば、知性のあるアルゴリズムなど不可能だろうと結論づけるでしょう。
+    しかし直感には反するものの、私はそれは早計だと考えます。
+    科学の歴史では、始めは考えられないほど複雑であったものが、後にシンプルで強力なアイデアのおかけで説明できるようになるなんてことは日常茶飯事なのです。
 </p>
 
-<p>
-<ul>
 
-    <!--<li><b><a href="chap1.html">Read Chapter 1</a></b>, which explains how
-    neural networks can learn to recognize handwriting -->
-    <li><b><a href="chap1.html">第1章</a></b>では、ニューラルネットワークが手書き文字を認識するしくみを説明します。
-
-        <!--<li><b><a href="chap2.html">Read Chapter 2</a></b>, which explains
-        backpropagation, the most important algorithm used to learn in neural
-          networks.-->
-    <li><b><a href="chap2.html">第2章</a></b>では、ニューラルネットワークを学習させる最も重要なアルゴリズムである、逆伝播という手法を説明します。
-
-
-        <!--<li><b><a href="chap3.html">Read Chapter 3</a></b>, which explains
-        many techniques which can be used to improve the performance of
-          backpropagation.-->
-    <li><b><a href="chap3.html">第3章</a></b>では、逆伝播の性能を向上させるための様々な技法を紹介します。
-
-
-        <!--<li><b><a href="chap4.html">Read Chapter 4</a></b>, which explains why
-          neural networks can compute any function.-->
-    <li><b><a href="chap4.html">第4章</a></b>では、ニューラルネットワークがなぜ任意の関数を計算できるのかを証明します。
-
-        <!--<li><b><a href="about.html">Learn more about the approach taken in
-        this book</a></b>
-          -->
-    <li><b><a href="about.html">この本について</a></b>では、この本で採用したアプローチについて説明します。
-</ul>
-</p>
 
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 </div><div class="footer"> <span class="left_footer"> In academic work,
