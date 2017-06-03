@@ -343,11 +343,637 @@ intelligence is possible.
 
 <p>
     <!--
-
+Which of these two points of view is correct?
 -->
+    一体どちらの視点が正しいのでしょうか？
 </p>
 
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<p>
+    <!--
+To get insight into this question, let's ask a closely related
+question, which is whether there's a simple explanation of how human
+brains work.  In particular, let's look at some ways of quantifying
+the complexity of the brain.  Our first approach is the view of the
+brain from
+<a href="http://en.wikipedia.org/wiki/Connectomics">connectomics</a>.  This
+is all about the raw wiring: how many neurons there are in the brain,
+how many glial cells, and how many connections there are between the
+neurons.  You've probably heard the numbers before - the brain
+contains on the order of 100 billion neurons, 100 billion glial cells,
+and 100 trillion connections between neurons.  Those numbers are
+staggering.  They're also intimidating.  If we need to understand the
+details of all those connections (not to mention the neurons and glial
+cells) in order to understand how the brain works, then we're
+certainly not going to end up with a simple algorithm for
+intelligence.
+-->
+    この問題について洞察を得るために、非常に近しい問題を探ってみましょう。
+    つまり、人間の脳がどのように働くのか、シンプルに説明することはできるか、という問題です。
+    特に脳の複雑さを測る方法に注目してみましょう。
+    始めに、<a href="https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%8D%E3%82%AF%E3%83%88%E3%83%9F%E3%82%AF%E3%82%B9">コネクトミクス</a>に基づいた脳の見方を考えてみます。
+    コネクトームとは、配線そのもののことです。つまり、脳の中にどれだけニューロンやグリア細胞がいるのかや、ニューロン同士の結合はどの程度あるのかといったことに相当します。
+    聞いたことがあるかもしれませんが、脳は1000億ものニューロンと、1000億のグリア細胞、そして<em>10兆ものニューロン同士の結合</em>から成っています。
+    数字を見て唖然とするでしょうか。怖いほど多いでしょう？
+    もし、脳がどのように働くのか知るために、これら全ての結合（ニューロンやグリア細胞のことではありませんよ）の詳細を理解する必要があるとしたら、
+    知性のあるシンプルなアルゴリズムには到底たどり着けないで終わるでしょう。
+</p>
+
+<>
+    <!--
+There's a second, more optimistic point of view, the view of the brain
+from molecular biology.  The idea is to ask how much genetic
+information is needed to describe the brain's architecture.  To get a
+handle on this question, we'll start by considering the genetic
+differences between humans and chimpanzees.  You've probably heard the
+sound bite that "human beings are 98 percent chimpanzee".  This
+saying is sometimes varied - popular variations also give the number
+as 95 or 99 percent.  The variations occur because the numbers were
+originally estimated by comparing samples of the human and chimp
+genomes, not the entire genomes.  However, in 2007 the entire
+chimpanzee genome was
+<a href="http://www.nature.com/nature/journal/v437/n7055/full/nature04072.html">sequenced</a>
+(see also
+<a href="http://genome.cshlp.org/content/15/12/1746.full">here</a>), and we
+now know that human and chimp DNA differ at roughly 125 million DNA
+base pairs.  That's out of a total of roughly 3 billion DNA base pairs
+in each genome.  So it's not right to say human beings are 98 percent
+chimpanzee - we're more like 96 percent chimpanzee.
+-->
+    もっと希望のありそうな視点があります。この二つ目の視点は、分子生物学に基づいたものです。
+    それは、どれだけ多くの遺伝情報が脳のアーキテクチャを記述するのに必要なのか、を探るものです。
+    この問題に着手するために、人間とチンパンジーの遺伝的差異について考えるところから始めましょう。
+    「人間とチンパンジーは、98％は同じである」と、ニュース番組か何かで聞いたことがあるでしょうか。
+    この数字は結構ばらつくのですが、だいたい95~99%だと言われます。
+    ばらつきは、ゲノム全体を比べているのではなく、そ子からサンプリングしたものを比べているためです。
+    しかし、2007年にチンパンジーのゲノム全てが<a href="http://www.nature.com/nature/journal/v437/n7055/full/nature04072.html">解読</a>
+    (あるいは<a href="http://genome.cshlp.org/content/15/12/1746.full">こちら</a>)され、今では大体1億2500万塩基対が異なっていることが知られています。
+    ところで、我々もチンパンジーも概ね30億塩基対のDNAを持っています。
+    つまり、98％同じであるというのは正しくありません。
+    ---- &nbsp; 96%チンパンジーである、というわけです。
+</p>
+
+<p>
+    <!--
+How much information is in that 125 million base pairs?  Each base
+pair can be labelled by one of four possibilities - the "letters"
+of the genetic code, the bases adenine, cytosine, guanine, and
+thymine.  So each base pair can be described using two bits of
+information - just enough information to specify one of the four
+labels.  So 125 million base pairs is equivalent to 250 million bits
+of information.  That's the genetic difference between humans and
+chimps!
+-->
+    1億2500万塩基対の中に、どれだけの情報があるというのでしょうか？
+    それぞれの塩基対には、４つの可能性のうち一つのラベルがつきます -
+    つまり、遺伝暗号の「文字」、アデニン(adenine), シトシン(cytosine), グアニン(guanine), そしてチミン(thymine)のうちどれかです。
+    ということは、各塩基対は2ビットの情報　-これでちょうど4つのラベルを示すことができます- を表現できる、ということになります。
+    ゆえに、1億2500万塩基対は2億5000万ビットの情報に相当するわけです。
+    これこそが人間とチンパンジーの違いなわけであります。
+</p>
+
+<p>
+    <!--
+Of course, that 250 million bits accounts for all the genetic
+differences between humans and chimps.  We're only interested in the
+difference associated to the brain.  Unfortunately, no-one knows what
+fraction of the total genetic difference is needed to explain the
+difference between the brains.  But let's assume for the sake of
+argument that about half that 250 million bits accounts for the brain
+differences.  That's a total of 125 million bits.
+-->
+    当然、人間とチンパンジーの遺伝的違い全てが2億5000万ビットで説明されます。
+    その中でも我々が気になるのは、脳に関連する違いだけです。
+    といっても残念なことに、どの遺伝子の違いが脳の違いを表すのかは誰も知りません。
+    そこで、2億5000万ビットのうち半分の、1億2500万ビットが脳の違いに寄与すると仮定しましょう。
+</p>
+
+<p>
+    <!--
+125 million bits is an impressively large number.  Let's get a sense
+for how large it is by translating it into more human terms.  In
+particular, how much would be an equivalent amount of English text?
+It
+<a href="http://ia902602.us.archive.org/23/items/bstj30-1-50/bstj30-1-50.pdf">turns
+  out</a> that the information content of English text is about 1 bit per
+letter.  That sounds low - after all, the alphabet has 26 letters
+- but there is a tremendous amount of redundancy in English text.
+Of course, you might argue that our genomes are redundant, too, so two
+bits per base pair is an overestimate.  But we'll ignore that, since
+at worst it means that we're overestimating our brain's genetic
+complexity.  With these assumptions, we see that the genetic
+difference between our brains and chimp brains is equivalent to about
+125 million letters, or about 25 million English words.  That's about
+30 times as much as the King James Bible.
+-->
+    1億2500万ビットというのはちょっと大きすぎる数値です。
+    もっと人の言葉らしく翻訳したら、どのくらいの量になるのか考えてみましょう。
+    等価な分量の英語の文章はどのくらいなのでしょうか？
+    英語の文章における情報量は、1文字あたりおおよそ1ビットであることが<a href="http://ia902602.us.archive.org/23/items/bstj30-1-50/bstj30-1-50.pdf">知られています</a>。
+    アルファベットは26文字なので、その値は少なく思われますが、英文には非常に大きな冗長性があります。
+    もちろんヒトゲノムも冗長性を持つため、塩基対一つあたり2ビットというのは過大評価であると思うでしょうが、ここでは無視しましょう。
+    無視したとしても、脳の遺伝的複雑性を過大評価するだけだから問題ないでしょう。
+    この仮定の元では、人間とチンパンジーの脳の遺伝的差異は 1億2500万文字、ないし2億5000万の英単語に相当すると言えます。
+    これはだいたい、欽定訳聖書の30倍にあたります。
+
+</p>
+
+<p>
+    <!--
+That's a lot of information.  But it's not incomprehensibly large.
+It's on a human scale.  Maybe no single human could ever understand
+all that's written in that code, but a group of people could perhaps
+understand it collectively, through appropriate specialization.  And
+although it's a lot of information, it's minuscule when compared to
+the information required to describe the 100 billion neurons, 100
+billion glial cells, and 100 trillion connections in our brains.  Even
+if we use a simple, coarse description - say, 10 floating point
+numbers to characterize each connection - that would require about
+70 quadrillion bits.  That means the genetic description is a factor
+of about half a billion less complex than the full connectome for the
+human brain.
+-->
+    大量の情報です。しかし、理解できないほど多いというわけではありません。
+    ヒトの理解できる程度です。この暗号に書かれたこと全てを一人で理解できる人間はいないでしょうが、チームを組んで適切に調べれば、正確に理解できるでしょう。
+    それに、大量の情報とは言え、脳内の1000億ものニューロン、1000億のグリア細胞、そして10兆ものニューロン同士の結合と比べたらずっと小さいものですよね。
+    たとえもしシンプルで大雑把な記述を用いたとして（例えば、10進浮動小数点数で、全ての結合を表すとすると）、だいたい7京ビット($7 \times 10^{16}$ bit)必要になるでしょう。
+    つまり、遺伝的表現においては、人間の脳のコネクトーム全体よりも大体5億くらい複雑でない、ということになります。
+
+</p>
+
+<p>
+    <!--
+What we learn from this is that our genome cannot possibly contain a
+detailed description of all our neural connections.  Rather, it must
+specify just the broad architecture and basic principles underlying
+the brain.  But that architecture and those principles seem to be
+enough to guarantee that we humans will grow up to be intelligent.  Of
+course, there are caveats - growing children need a healthy,
+stimulating environment and good nutrition to achieve their
+intellectual potential.  But provided we grow up in a reasonable
+environment, a healthy human will have remarkable intelligence. In
+some sense, the information in our genes contains the essence of how
+we think.  And furthermore, the principles contained in that genetic
+information seem likely to be within our ability to collectively
+grasp.
+-->
+    ここから、ヒトゲノムは神経結合の詳細な記述を含み得ない、ということがわかります。
+    むしろ、脳に潜む広範なアーキテクチャや、基本原理を特定しなければならないでしょう。
+    また、そのようなアーキテクチャや原理によって、ヒトが知性を持つようになることが保証されていなければなりません。
+    もちろん、子供が成長して知性を獲得するには、健康と、刺激のある環境、そして十分な栄養もなければなりません。
+    そのような環境であるならば、健康なヒトは驚くほど知性的になるでしょう。
+    ある意味で、遺伝子がもつ情報は我々が考える方法の本質を含んでいると言えます。
+    さらに言えば、遺伝情報に潜む原理は、我々がまとめて獲得できる能力の範囲内にありそうだ、とも言えるでしょう。
+
+</p>
+
+<p>
+    <!--
+All the numbers above are very rough estimates.  It's possible that
+125 million bits is a tremendous overestimate, that there is some much
+more compact set of core principles underlying human thought.  Maybe
+most of that 125 million bits is just fine-tuning of relatively minor
+details.  Or maybe we were overly conservative in how we computed the
+numbers.  Obviously, that'd be great if it were true!  For our current
+purposes, the key point is this: the architecture of the brain is
+complicated, but it's not nearly as complicated as you might think
+based on the number of connections in the brain.  The view of the
+brain from molecular biology suggests we humans ought to one day be
+able to understand the basic principles behind the brain's
+architecture.
+-->
+    これまでに議論した数字はどれも、非常に大雑把に見積もりました。
+    1億2500万ビットという数字はとんでもなく過大に見積もっていて、ヒトの思考にはもっと小柄な中核となる原理が潜んでいる可能性もあります。
+    もしかしたら、1億2500万ビットのうち殆どは、比較的規模の小さい部分の細かいチューニングに使われているのかもしれません。
+    あるいは我々は、数字を計算するのに保守的になりすぎているのかもしれません。
+    これがもし本当だとしたなら、間違いなくそれは素晴らしいことでしょう！
+    要するに、脳のアーキテクチャは複雑であるが、脳内にある結合の数から考えられるほど複雑ではないことが重要です。
+    分子生物学の観点から言うと、まず間違いなく、いつか脳アーキテクチャに潜む基本原理は解明されるらしいのです。
+
+</p>
+
+<p>
+    <!--
+In the last few paragraphs I've ignored the fact that 125 million bits
+merely quantifies the genetic <em>difference</em> between human and
+chimp brains.  Not all our brain function is due to those 125 million
+bits.  Chimps are remarkable thinkers in their own right.  Maybe the
+key to intelligence lies mostly in the mental abilities (and genetic
+information) that chimps and humans have in common.  If this is
+correct, then human brains might be just a minor upgrade to chimpanzee
+brains, at least in terms of the complexity of the underlying
+principles.  Despite the conventional human chauvinism about our
+unique capabilities, this isn't inconceivable: the chimpanzee and
+human genetic lines diverged just
+<a href="http://en.wikipedia.org/wiki/Chimpanzee-human_last_common_ancestor">5
+  million years ago</a>, a blink in evolutionary timescales.  However, in
+the absence of a more compelling argument, I'm sympathetic to the
+conventional human chauvinism: my guess is that the most interesting
+principles underlying human thought lie in that 125 million bits, not
+in the part of the genome we share with chimpanzees.
+-->
+    ここいくつかの段落では、ヒトとチンパンジーの脳の遺伝的<em>違い</em>を単に数量で表すと1億2500万ビットである、という事実を無視して議論してきました。
+    我々の脳機能の全部がその1億2500万ビットによってもたらされるわけではないでしょう。
+    チンパンジーは彼らの権利に基づいて見事に考えているはずです。
+    恐らく、知性を探すための鍵は、チンパンジーとヒトが共通して持っている心理的能力（ないし遺伝情報）にあるでしょう。
+    もしそうだとしたら、少なくとも背後にある原理の複雑性の点で、ヒトの脳はチンパンジーのそれをちょっとばかりアップグレードしたものに過ぎないと言えるでしょう。
+    ヒト特有の能力に基づいたヒト至上主義にもかかわらず、上述のことが信じがたいことであるとも言えません。
+    チンパンジーとヒトの遺伝的系列は、たった<a href="http://en.wikipedia.org/wiki/Chimpanzee-human_last_common_ancestor">500万年前に分岐した</a>に過ぎず、それは進化の歴史から考えてほんの一瞬であるからです。
+    といっても、私はヒト至上主義にはちょっと共感しています。
+    というのも、ヒトとチンパンジーが遺伝的に共有する部分ではなく、むしろその1億2500万ビットにこそ、最も興味深い原理が隠されているのだと思うからです。
+
+</p>
+
+<p>
+    <!--
+Adopting the view of the brain from molecular biology gave us a
+reduction of roughly nine orders of magnitude in the complexity of our
+description.  While encouraging, it doesn't tell us whether or not a
+truly simple algorithm for intelligence is possible.  Can we get any
+further reductions in complexity?  And, more to the point, can we
+settle the question of whether a simple algorithm for intelligence is
+possible?
+-->
+    脳に関する分子生物学の観点を取り入れると、複雑性を記述するのに、大体9桁くらい削減できます。
+    これは非常に心強いですが、知性のあるシンプルなアルゴリズムがあるかどうかについては何も教えてはくれません。
+    複雑性をもっと減らすことはできないでしょうか？
+    そしてもっと重要なのは、知性のあるシンプルなアルゴリスムが可能かどうかという問題を解決できるのでしょうか？
+
+</p>
+
+<p>
+    <!--
+Unfortunately, there isn't yet any evidence strong enough to
+decisively settle this question.  Let me describe some of the
+available evidence, with the caveat that this is a very brief and
+incomplete overview, meant to convey the flavour of some recent work,
+not to comprehensively survey what is known.
+-->
+    残念なことに、この問題をきっぱりと解決するに十分な証拠はまだありません。
+    証拠を説明してみてください、
+    警告
+    とても単純で大まかな概要、つまり包括的な調査ではなく、最近の研究の特色を説明しましょう。
+</p>
+
+<p>
+    <!--
+Among the evidence suggesting that there may be a simple algorithm for
+intelligence is an experiment
+<a href="http://www.nature.com/nature/journal/v404/n6780/abs/404841a0.html">reported</a>
+in April 2000 in the journal <em>Nature</em>.  A team of scientists led
+by Mriganka Sur "rewired" the brains of newborn ferrets.  Usually,
+the signal from a ferret's eyes is transmitted to a part of the brain
+known as the visual cortex.  But for these ferrets the scientists took
+the signal from the eyes and rerouted it so it instead went to the
+auditory cortex, i.e, the brain region that's usually used for
+hearing.
+-->
+    知性をもつシンプルなアルゴリズムが存在することを示す証拠の中に、2000年4月に<em>Nature誌</em>で発表されたある<a href="http://www.nature.com/nature/journal/v404/n6780/abs/404841a0.html">実験</a>があります。
+    Mriganka Sur教授率いる科学者チームは、生まれたてのフェレットの脳を"繋ぎ直し"ました。
+    一般的に、フェレットの目から送られる信号は、脳の中の視覚野という部分に送られます。
+    科学者たちは、このフェレットの目の信号が別のルートを通るようにして、視覚野の代わりに聴覚野に至るようにしました。
+    聴覚野というのはつまり、脳の中で耳で聴くのに使われる領域のことです。
+
+</p>
+
+<p>
+    <!--
+To understand what happened when they did this, we need to know a bit
+about the visual cortex.  The visual cortex contains many
+<a href="http://en.wikipedia.org/wiki/Orientation_column">orientation
+  columns</a>.  These are little slabs of neurons, each of which responds
+to visual stimuli from some particular direction.  You can think of
+the orientation columns as tiny directional sensors: when someone
+shines a bright light from some particular direction, a corresponding
+orientation column is activated.  If the light is moved, a different
+orientation column is activated.  One of the most important high-level
+structures in the visual cortex is the
+<a href="http://www.scholarpedia.org/article/Visual_map#Orientation_Maps">orientation
+  map</a>, which charts how the orientation columns are laid out.
+-->
+    ここで、どういった現象が生じるのかを理解するために、少し視覚野について知る必要があります。
+    視覚野は、多くの<a href="http://en.wikipedia.org/wiki/Orientation_column">方位選択性コラム</a>から成ります。
+    これは、小さなニューロンの塊であり、それぞれがある特定の方向を向いた視覚刺激に反応します。
+    方位選択性コラムは、小型の方向センサだと見なせます。例えば、ある特定の方角から光を当てたとき、その方角に関係する方位選択性コラムが励起します。
+    光が動けば、また異なる方位選択性コラムが励起されます。
+    視覚野の中の最も重要な高次構造の一つに、<a href="http://www.scholarpedia.org/article/Visual_map#Orientation_Maps">方向マップ</a>というものがあります。
+    方向マップとは、方位選択性コラムがどのように配置されているのかをマッピングしたものです。
+
+</p>
+
+<p>
+    <!--
+What the scientists found is that when the visual signal from the
+ferrets' eyes was rerouted to the auditory cortex, the auditory cortex
+changed.  Orientation columns and an orientation map began to emerge
+in the auditory cortex.  It was more disorderly than the orientation
+map usually found in the visual cortex, but unmistakably similar.
+Furthermore, the scientists did some simple tests of how the ferrets
+responded to visual stimuli, training them to respond differently when
+lights flashed from different directions.  These tests suggested that
+the ferrets could still learn to "see", at least in a rudimentary
+fashion, using the auditory cortex.
+-->
+    科学者たちは、フェレットの目からやってきた視覚刺激が聴覚野にたどり着いた時、聴覚野が変化するということを見つけました。
+    方位選択性コラムと方向マップが聴覚野で生まれ始めたのです。
+    視覚野で通常見られるような方向マップとは異なり、綺麗に並んではいないのですが、間違いなく似たものでした。
+    さらに科学者たちはフェレットが視覚刺激に対してどのように反応するのかについて、ある簡単なテスト（光を異なる方向から当てた時に異なる反応を返すように訓練する）を行いました。
+    このテストの結果、少なくとも原始的には、聴覚野を用いてフェレットが”見る”ことを学習していることが分かりました。
+</p>
+
+<p>
+    <!--
+This is an astonishing result.  It suggests that there are common
+principles underlying how different parts of the brain learn to
+respond to sensory data.  That commonality provides at least some
+support for the idea that there is a set of simple principles
+underlying intelligence.  However, we shouldn't kid ourselves about
+how good the ferrets' vision was in these experiments.  The
+behavioural tests tested only very gross aspects of vision.  And, of
+course, we can't ask the ferrets if they've "learned to see".  So
+the experiments don't prove that the rewired auditory cortex was
+giving the ferrets a high-fidelity visual experience.  And so they
+provide only limited evidence in favour of the idea that common
+principles underlie how different parts of the brain learn.
+-->
+    これは驚くべき結果です。
+    感覚データに対して、脳の各部位がどのように学習するのか、その根底にある共通原理があることを示しています。
+    この共通性は、知性を成す一連のシンプルな原理があるというアイデアを少なくとも支持しているでしょう。
+    しかしながら、この実験のフェレットの視覚はなんて素晴らしいのか、などと甘く考えてはいけません。
+    この行動試験は、視覚の全体的な様子を試したものに過ぎません。
+    さらに当然のことながら、フェレットに”お前は見ることを学んだのか”と尋ねる事もできません。
+    ゆえにこの実験は、聴覚野を再配線する事で、信頼性の高いの視覚経験を得られる、などとは言っていません。
+    要するにこの実験によって、脳の各部位が学習する方法に共通原理があるというアイデアがどうやら正しそうだという、ごく限定された証拠がもたらされたに過ぎないのです。
+</p>
+
+<p>
+    <!--
+What evidence is there against the idea of a simple algorithm for
+intelligence?  Some evidence comes from the fields of evolutionary
+psychology and neuroanatomy.  Since the 1960s evolutionary
+psychologists have discovered a wide range of <em>human universals</em>,
+complex behaviours common to all humans, across cultures and
+upbringing.  These human universals include the incest taboo between
+mother and son, the use of music and dance, as well as much complex
+linguistic structure, such as the use of swear words (i.e., taboo
+words), pronouns, and even structures as basic as the verb.
+Complementing these results, a great deal of evidence from
+neuroanatomy shows that many human behaviours are controlled by
+particular localized areas of the brain, and those areas seem to be
+similar in all people.  Taken together, these findings suggest that
+many very specialized behaviours are hardwired into particular parts
+of our brains.
+-->
+    知性を持つシンプルなアルゴリズム、というアイデアを否定するような証拠はどんなものがあるでしょうか？
+    とある証拠が、進化心理学と神経解剖学の領域からもたらされています。
+    1960年代から、進化心理学者によって多くの<em>ヒューマン・ユニバーサル（普遍文化）</em>が発見されました。
+    ヒューマン・ユニバーサルとは、文化や教育にも現れる、全ての人間に共通する複雑な習性のことです。
+    これらヒューマン・ユニバーサルには、母と息子との近親相姦のタブーや、音楽とダンスの用い方、
+    それに複雑な言語の構造すら含まれています（罵倒表現の使い方（タブーとされる言葉とか）・代名詞・動詞のような基本的な構造すらも）。
+    この結果を補うにあたり、神経解剖学がもたらした大量の証拠が次のことを示しています。
+    つまり、人の行動は特定の局所的な脳の領域によって制御されていて、かつその領域はどうやら全ての人間に共通であるようだ、ということです。
+    これらの発見から推察するに、たくさんのごく特徴的な行動が、我々の脳の特定の部位にシステム的に組み込まれていると言えそうです。
+
+</p>
+
+<p>
+    <!--
+Some people conclude from these results that separate explanations
+must be required for these many brain functions, and that as a
+consequence there is an irreducible complexity to the brain's
+function, a complexity that makes a simple explanation for the brain's
+operation (and, perhaps, a simple algorithm for intelligence)
+impossible.  For example, one well-known artificial intelligence
+researcher with this point of view is Marvin Minsky.  In the 1970s and
+1980s Minsky developed his "Society of Mind" theory, based on the
+idea that human intelligence is the result of a large society of
+individually simple (but very different) computational processes which
+Minsky calls agents.  In
+<a href="https://en.wikipedia.org/wiki/Society_of_Mind">his book
+  describing the theory</a>, Minsky sums up what he sees as the power of
+this point of view:
+-->
+    上述の結果から、「たくさんある脳機能を説明するにはそれぞれ異なった説明が必要で、結果として脳機能の複雑性は分割不可能である。
+    その複雑性のために、脳の動作をシンプルに説明すること（それに恐らく、知性のあるシンプルなアルゴリズムも）は不可能である」という結論を導き出す人もいるでしょう。
+    例えば、この視点を持ったある有名な人工知能研究者がいます。Marvin Minskyという人です。
+    彼は、1970, 80年代に<a href="https://en.wikipedia.org/wiki/Society_of_Mind">「心の社会」</a>という理論を生み出しました。それによれば、ヒトの知性は、Minskyの言う所のエージェント
+    という、個々に独立したシンプルな（そして非常に異なった）数値計算的プロセスの巨大な集合がもたらした結果である、と言います。
+    Minsky氏は自身の書籍の中で、この視点の何が強力であるかをまとめています：
+</p>
+
+
+<blockquote>
+    <!--
+What magical trick makes us intelligent? The trick is that there is
+no trick. The power of intelligence stems from our vast diversity,
+not from any single, perfect principle.
+-->
+    What magical trick makes us intelligent? The trick is that there is
+    no trick. The power of intelligence stems from our vast diversity,
+    not from any single, perfect principle.
+</blockquote>
+
+<blockquote>
+    どんな魔法のような手品を使ったら我々は知性を持つだろうか？
+    私は、タネが無いのがこの手品の真相だと思う。
+    知性という力は、広範な多様性にこそその由来を持ち、一つの完璧な原理など存在しないのだ。
+
+</blockquote>
+
+<p>
+    <!--
+In a response*
+
+<span class="marginnote">
+*In "Contemplating Minds: A Forum for
+  Artificial Intelligence", edited by William J. Clancey, Stephen
+  W. Smoliar, and Mark Stefik (MIT Press, 1994).
+</span>
+
+to reviews of his
+book, Minsky elaborated on the motivation for the Society of Mind,
+giving an argument similar to that stated above, based on neuroanatomy
+and evolutionary psychology:
+
+-->
+    彼の書籍についたレビューに対する回答*の中で、
+    <span class="marginnote">
+        *In "Contemplating Minds: A Forum for
+          Artificial Intelligence", edited by William J. Clancey, Stephen
+          W. Smoliar, and Mark Stefik (MIT Press, 1994).
+    </span>
+    Minsky氏は心の社会を謳う動機についてより詳しく述べ、
+    上述したものと同じような、神経解剖学と進化心理学に基づく主張を展開しています：
+</p>
+
+
+<blockquote>
+    <!--
+We now know that the brain itself is composed of hundreds of
+different regions and nuclei, each with significantly different
+architectural elements and arrangements, and that many of them are
+involved with demonstrably different aspects of our mental
+activities.  This modern mass of knowledge shows that many phenomena
+traditionally described by commonsense terms like "intelligence"
+or "understanding" actually involve complex assemblies of
+machinery.
+-->
+    We now know that the brain itself is composed of hundreds of
+    different regions and nuclei, each with significantly different
+    architectural elements and arrangements, and that many of them are
+    involved with demonstrably different aspects of our mental
+    activities.  This modern mass of knowledge shows that many phenomena
+    traditionally described by commonsense terms like "intelligence"
+    or "understanding" actually involve complex assemblies of
+    machinery.
+</blockquote>
+
+<blockquote>
+    既に脳それ自体が、何百もの個々の領域や神経核から構成されることは分かっている。
+    それぞれが素晴らしく独特なアーキテクチャの要素・配列であり、さらにその多くが
+    心理的行動のうち明らかに異なる側面に関係していることも知られている。
+    現代にもたらされたこの大量の知識によって、
+    「知性」や「理解」のような共通感覚として説明される多くの現象は、
+    実際には機械的な要素の複雑な組み立てに関係しているとわかるのだ。
+
+</blockquote>
+
+<p>
+    <!--
+Minsky is, of course, not the only person to hold a point of view
+along these lines; I'm merely giving him as an example of a supporter
+of this line of argument.  I find the argument interesting, but don't
+believe the evidence is compelling.  While it's true that the brain is
+composed of a large number of different regions, with different
+functions, it does not therefore follow that a simple explanation for
+the brain's function is impossible.  Perhaps those architectural
+differences arise out of common underlying principles, much as the
+motion of comets, the planets, the sun and the stars all arise from a
+single gravitational force.  Neither Minsky nor anyone else has argued
+convincingly against such underlying principles.
+-->
+    もちろん、こういった主張に沿った視点を持つのは、Minsky氏だけというわけではありません。
+    単にその中の一人としてMinsky氏を挙げたに過ぎませんから。
+    さて、この主張は面白いと思いますが、証拠が抗いがたく十分であるとは思えません。
+    脳がたくさんの異なる領域から構成されていて、それぞれ異なる機能を持つことは間違いありませんが、
+    それゆえに脳機能のシンプルな記述が不可能であるというわけでは無いでしょう。
+    恐らくこういったアーキテクチャにおける違いは、共通原理から生まれたものであり、それは
+    ちょうど彗星、惑星、太陽や星々が単なる重力によって生まれたものであるのと同じだと思います。
+    Minsky氏も誰も、そのような共通原理を否定する確かな主張をしているわけではないのです。
+
+</p>
+
+<p>
+    <!--
+My own prejudice is in favour of there being a simple algorithm for
+intelligence.  And the main reason I like the idea, above and beyond
+the (inconclusive) arguments above, is that it's an optimistic idea.
+When it comes to research, an unjustified optimism is often more
+productive than a seemingly better justified pessimism, for an
+optimist has the courage to set out and try new things.  That's the
+path to discovery, even if what is discovered is perhaps not what was
+originally hoped.  A pessimist may be more "correct" in some narrow
+sense, but will discover less than the optimist.
+-->
+    これは私個人の見解でありますが、知性のあるシンプルなアルゴリズムはある、という主張を好ましく感じています。
+    そしてその主な理由は、上述の（決定的ではない）主張と比べ、こちらの方が楽観的であるからです。
+    研究の場合、正当な理由のない楽観主義の方が、一見正当な理由のある悲観主義よりもずっと生産的であることが多いのです。
+    なればこそ、楽観主義者は新しいことを始めようと決心するのです。
+    たとえ発見されたものが当初期待されていたものでなかったにせよ、それこそが発見の道筋であるのです。
+    悲観主義者はとても狭い意味で「正しい」かもしれませんが、楽観主義者ほど多くのことは発見できないでしょう。
+</p>
+
+<p>
+    <!--
+This point of view is in stark contrast to the way we usually judge
+ideas: by attempting to figure out whether they are right or wrong.
+That's a sensible strategy for dealing with the routine minutiae of
+day-to-day research.  But it can be the wrong way of judging a big,
+bold idea, the sort of idea that defines an entire research program.
+Sometimes, we have only weak evidence about whether such an idea is
+correct or not.  We can meekly refuse to follow the idea, instead
+spending all our time squinting at the available evidence, trying to
+discern what's true.  Or we can accept that no-one yet knows, and
+instead work hard on developing the big, bold idea, in the
+understanding that while we have no guarantee of success, it is only
+thus that our understanding advances.
+-->
+    この視点は、我々が普段モノを決める（正しいのかどうかをはっきりさせようと試みる）のとは全く逆のやり方です。
+    さっきのは、日々の研究における些細なルーティンをこなすための、思慮深い戦略であります。
+
+    でも、研究計画全体を決めるといった類の、巨大で大雑把なアイデアを判断する方法としては間違っています。
+    時に我々には、アイデアが合っているのかどうか判断する証拠に足りていないことがあります。
+
+    大人しくアイデアを放棄する代わりに、
+    何が正しいのか見極めようと、手元にある証拠を目を凝らして見ることに全精力を注ぐこともできるでしょう。
+
+    あるいは、誰も知らないのだからと諦めてしまう代わりに、
+    成功の保証はなくとも、増えていく知識を頼りに、巨大で大雑把なアイデアを発展させようと頑張ることもできるでしょう。
+</p>
+
+<p>
+    <!--
+With all that said, in its <em>most</em> optimistic form, I don't
+believe we'll ever find a simple algorithm for intelligence.  To be
+more concrete, I don't believe we'll ever find a really short Python
+(or C or Lisp, or whatever) program - let's say, anywhere up to a
+thousand lines of code - which implements artificial intelligence.
+Nor do I think we'll ever find a really easily-described neural
+network that can implement artificial intelligence.  But I do believe
+it's worth acting as though we could find such a program or network.
+That's the path to insight, and by pursuing that path we may one day
+understand enough to write a longer program or build a more
+sophisticated network which does exhibit intelligence.  And so it's
+worth acting as though an extremely simple algorithm for intelligence
+exists.
+-->
+    そうは言うものの、<em>最大限に</em>楽観的に捉えたとしても、知性をもつシンプルなアルゴリズムを見つけられると断言することはできません。
+    もっと具体的に言えば、人工知能として動くような、Python(ないしC、Lisp、あるいはなんでも）で本当に端的なプログラム
+    （まあ云千行のでもいいけれど)が書けるだろう、とか、
+    人工知能を実装した、本当に簡単に表現されたニューラルネットワークを見つけられる、などと断じることはできないのです。
+
+    しかし、そういったプログラムやネットワークを見つけられるものとして行動するのには意味があると信じています。
+    それが洞察を得る近道であり、そんな近道を追い求めることで、いつの日かきっと、もっと精巧になったネットワーク
+    知性を持つ圧倒的にシンプルなアルゴリズムが存在するものとして行動するのは意味があるのだと思います。
+</p>
+
+<p>
+    <!--
+In the 1980s, the eminent mathematician and computer scientist
+<a href="http://en.wikipedia.org/wiki/Jacob_T._Schwartz">Jack Schwartz</a>
+was invited to a debate between artificial intelligence proponents and
+artificial intelligence skeptics.  The debate became unruly, with the
+proponents making over-the-top claims about the amazing things just
+round the corner, and the skeptics doubling down on their pessimism,
+claiming artificial intelligence was outright impossible.  Schwartz
+was an outsider to the debate, and remained silent as the discussion
+heated up.  During a lull, he was asked to speak up and state his
+thoughts on the issues under discussion.  He said: "Well, some of
+these developments may lie one hundred Nobel prizes away"
+(<a href="http://books.google.ca/books?id=nFvY20pHghAC">ref</a>, page 22).
+It seems to me a perfect response.  The key to artificial intelligence
+is simple, powerful ideas, and we can and should search optimistically
+for those ideas.  But we're going to need many such ideas, and we've
+still got a long way to go!
+-->
+    1980年代において、非常に傑出した数学・コンピュータ科学者であった
+    <a href="http://en.wikipedia.org/wiki/Jacob_T._Schwartz">Jack Schwartz</a>は、
+    人工知能を支持する人と、懐疑的な人を招いて議論しました。
+    支持者たちが、驚嘆すべきものはすぐそこまで来ているのだ、という内容の度の過ぎた主張を繰り出す一方で、
+    懐疑論者たちは、人工知能などはっきり不可能だと彼らのペシミズムを倍賭けしていって、
+    この議論は手に負えないものになっていきました。
+
+    Schwartz氏は議論に参加せず、話し合いに熱が入って来ても黙ったままでした。
+    議論に小休止入った際に彼は、声を上げてもいいかと尋ね、協議中の問題に対する彼の考えを述べ始めました。
+    「恐らくこれの開発までに、ノーベル賞が100個必要になるだろう(<a href="http://books.google.ca/books?id=nFvY20pHghAC">ref</a>, page 22)」
+    完璧な回答ではないでしょうか？人工知能を紐解く鍵はシンプルで強力なアイデアであり、そんなアイデアを探すことは
+    可能であり、楽観的になってすべきことなのです。
+
+    そんなアイデアはもっともっとたくさん必要で、我々はまだまだ道半ばなのですから。
+</p>
+
+
+<br/>
+
 </div><div class="footer"> <span class="left_footer"> In academic work,
 please cite this book as: Michael A. Nielsen, "Neural Networks and
 Deep Learning", Determination Press, 2014
